@@ -35,7 +35,30 @@ var controller = {
                 if(!project) return res.status(404).send({message:"there is nothing to show"});
                 return res.status(200).send({project});
             });
-        }
+        },
+
+        getByTitle: function(req, res){
+            var title = req.params.title;
+            if(title == null) return res.status(400).send({message:'the title does not exist'});
+            Projets.find({title:title}, (err, project) =>{
+                if(err) return res.status(500).send({message:'error returning data'});
+                if(!project) return res.status(404).send({message: "does not exist"});
+                return res.status(200).send({project});
+            });
+               
+        },
+         delete: function(req, res){
+         var project = req.params.id;
+                if(project == null) return res.status(400).send({message:'the ID does not exist'});
+                Projets.findByIdAndRemove(project, (err, project) =>{
+                 if(err) return res.status(500).send({message:'error returning data'});
+                 if(!project) return res.status(404).send({message: "does not exist"});
+                 return res.status(200).send({project});
+                });
+                
+          }
+
+         }
            
     }
 
