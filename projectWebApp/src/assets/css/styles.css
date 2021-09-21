@@ -26,6 +26,7 @@ header{
     position: fixed;
     text-transform: uppercase;
 }
+
 header ul{
     display:block;
     width: 50%;
@@ -55,27 +56,28 @@ header a:hover{
        background: rgba(0,0,0,0.8);
        color: whitesmoke;
 }
-.info-container{
-    min-height: auto;
+.page-home{
+    min-height: 1200px;
     width: 75%;
     margin: 120px auto;
     box-shadow: 0px 0px 40px black;
     background: rgba(255,255,255,0.7);
     padding-top: 120px;
-    border-radius: 17px;
-    padding-top: 120px;
+  
    
-}
-#page-home{
-     min-height: 900px;
-     width: 100%;
-     background: rgba(233, 231, 231, 0.7);
-    
 }
 
 .animation{
     opacity: 0;
     transition: all 0.5s;
+}
+
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    font-size: 1.2rem;
+    color:rgb(0, 0, 0.5);
 }
 
 

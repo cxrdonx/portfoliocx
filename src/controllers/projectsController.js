@@ -56,10 +56,7 @@ var controller = {
                  return res.status(200).send({project});
                 });
                 
-          }
-
-         }
-           
+            }
     }
 
 module.exports = controller;
