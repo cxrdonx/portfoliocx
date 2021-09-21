@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit { 
+    
+public title: string;
+public subtitle: string;
+public tools: string[];
 
-  constructor() { }
+  constructor() { 
+    this.title ="HOLA, soy José Cardona";
+    this.subtitle ="Programador Java";
+    this.tools = ["Java", "NodeJs", "HTML", "CSS", "JavaScript", "Github"];
+  }
 
   ngOnInit(): void {
+   
   }
 
 }
