@@ -9,7 +9,7 @@
 }
 html{
     font-size: 62.5%;
-    font-family:"";
+    font-family: work sans;
 }
 body{
     background-attachment: fixed;
@@ -22,9 +22,10 @@ body{
 header{
     display: block;
     width: 100%;
-    height: 50px;
+    height: 75px;
     position: fixed;
     text-transform: uppercase;
+    background-color: #161a1d;
 }
 
 header ul{
@@ -33,6 +34,7 @@ header ul{
     height: inherit;
     margin: 0px auto;
     text-align: center;
+    
 }
 header ul li{
     display: inline-block;
@@ -46,23 +48,29 @@ header ul li a{
     height: inherit;
     text-decoration: none;
     font-size: 1.2rem;
-    color: black;
-    transition: all 300ms;
+    color: whitesmoke;
+    transition: all 400ms;
     padding-inline: 48px;
 }
 
 
 header a:hover{
-       background: rgba(0,0,0,0.8);
+       background: #6d00e1 ;
        color: whitesmoke;
 }
+
+.background-image{
+     background-image: url('../images/backEnd.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
 .page-home{
-    min-height: 1495px;
-    width: 75%;
+    
+    width: 100%;
     margin: 0 auto;
-    box-shadow: 0px 0px 39px black;
-    background: rgba(255,255,255,0.7);
-    padding-top: 140px;
+    padding-top: 1px;
+    background-color:#161a1d;
 }
 
 .animation{
@@ -72,35 +80,49 @@ header a:hover{
 
 .about-container{
      width: 100%;
-     height: 450px;
-     margin: 100px auto;
+     height: 600px;
+     margin: 72px auto;
+     margin-bottom: 200px;
+   
+   
 }
 
 .about--presentation-container{
-    margin-bottom: 150px;
+    
+    margin-bottom: 200px;
+    padding: 170px;
     text-align: center;
+    margin-bottom: 415px;
+    
 }
 
 .about--presentation-container .title{
      font-size: 2.5rem;
      font-weight: bold;
+     font-weight: bold;
+     color: whitesmoke;
+     font-family: 'work sans' sans-serif;
 }
 
 .about--presentation-container .subtitle{
      font-size: 1rem;
-     color: #1b1a1acd;
+     color: whitesmoke;
 }
 
 .aboutme--presentation-container{
-     border-top: 1px solid rgba(0, 0, 0, 0.476);
-     text-align: left;
-        padding: 100px
+    height: 1000px;
+    margin-top: -200px;
+    width: 100%;
+     text-align:center;
+        padding: 100px;
+        background-color:#1e2326;
 
 }
 .aboutme--presentation-container .about-me{
     font-size: 1.9rem;
-    margin-top: 90px;
-    
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color:whitesmoke;
     
 }
 
@@ -112,37 +134,75 @@ header a:hover{
 
 
 .about-me--tools{
-    width: 100%;
+    width: 50%;
     height: 400px;
+    display:fixed;
+    border-left: #6d00e1 solid 3px;
     margin: 0px auto;
-    padding-top: 100px;
-    text-align: center;
+  padding: 50px;
+    color:whitesmoke;
+    background-color: #252A2E;
+    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
+    
+}
+.about-me--languages{
+    width: 100%;
+    display: inline-block;
+    padding: 50px;
+    height: 500px;
+   
 }
 
 .about-me--languages p{
     text-align: center;
+
     font-size: 1.6rem;
-    margin-top: 57px;
+    padding: 8px;
+    
+    
+    
+    
 }
-.about-me--languages p .java{
+ .java{
     /* bacground-image: url(../assets/img/java.png); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    border-bottom-color: #6d00e1 ;
+  
 }
+
+.contact-me--container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+
+.contact-me--container .contact-me{
+      display: inline-block;
+      margin: 0 auto;
+}
+
+.contact-me--container{
+     margin-top: 250px;
+     width: 100%;
+     height: 550px;
+     margin-bottom: -10px;
+}
+
+
 
 
 footer{
     width:100%;
-    height: 160px;
-    background-color: black;
+    height: 130px;
+    background-color: #111416;
     margin: 0px auto;
-    padding-left: 250px;
+    padding-left: 100px;
     text-decoration: none;
     padding-top: 50px;
     font-size: 1.4rem;
     color:rgb(255, 255, 255);
     display: flex;
+    ;
    
 }
 
