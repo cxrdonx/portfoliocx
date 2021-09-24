@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>ProjectWebApp</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,800,900">
@@ -16,19 +17,29 @@
 <body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <app-root></app-root>
+  
    <script>
      AOS.init();
-      let animation = document.querySelectorAll(".animation");
-        function scroll(){
-           let scrollTop = document.documentElement.scrollTop;
-           for(var i=0; i<animation.length; i++){
-             let heightAnimation = animation[i].offsetTop;
-             if(heightAnimation -400<scrollTop){
-               animation[i].style.opacity =1;
-             }
-           }
-        }
-        window.addEventListener('scroll', scroll);
+    
+      const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+        //Toggle Nav
+        burger.addEventListener('click', () => {
+          console.log('Hello World');
+          nav.classList.toggle('nav-active');
+        });
+          //Animate Links
+        
+      }
+      grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6Lcc6YQcAAAAAN-Lwu2j9rM2Ntm7nlUbNQwrnrNW', {action: 'login'}).then(function(token) {
+      
+    });
+});
+    
+
       
    </script>
 </body>

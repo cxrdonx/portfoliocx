@@ -18,6 +18,13 @@ body{
     float: none;
     clear: both;
 }
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  
+}
 
 header{
     display: block;
@@ -92,7 +99,7 @@ header a:hover{
     margin-bottom: 200px;
     padding: 170px;
     text-align: center;
-    margin-bottom: 415px;
+    /*margin-bottom: 415px;*/
     
 }
 
@@ -120,7 +127,7 @@ header a:hover{
 }
 .aboutme--presentation-container .about-me{
     font-size: 1.9rem;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-bottom: 100px;
     color:whitesmoke;
     
@@ -134,12 +141,16 @@ header a:hover{
 
 
 .about-me--tools{
-    width: 50%;
+ 
+    min-width: 20%;
+    max-width: 50%;
     height: 400px;
-    display:fixed;
+    align-items: center;
     border-left: #6d00e1 solid 3px;
     margin: 0px auto;
-  padding: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
     color:whitesmoke;
     background-color: #252A2E;
     box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
@@ -148,7 +159,7 @@ header a:hover{
 .about-me--languages{
     width: 100%;
     display: inline-block;
-    padding: 50px;
+  
     height: 500px;
    
 }
@@ -158,34 +169,96 @@ header a:hover{
 
     font-size: 1.6rem;
     padding: 8px;
-    
-    
-    
+ 
     
 }
- .java{
-    /* bacground-image: url(../assets/img/java.png); */
-    border-bottom-color: #6d00e1 ;
-  
+   .java{
+      display: inline-block;
+      width: 60px;
+      margin: auto;
+      height: 60px;
+      background-image: url('../images/java.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: block;
+      cursor: pointer;
+  }
+
+  .github{
+    display: inline-block;
+    margin: 11px auto;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/github.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    cursor: pointer;
+    
+}
+.javascript{
+    display: inline-block;
+    margin: 11px auto;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/javascript.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    cursor: pointer;
+    
+
 }
 
 .contact-me--container{
+    margin-top: 250px;
     width: 100%;
     height: 600px;
-    display: flex;
+    margin-bottom: -10px;
+    display:flex;
 }
+
 
 
 .contact-me--container .contact-me{
+      width: 50%;
+      height: 400px;
+      background-color: #111416;
       display: inline-block;
-      margin: 0 auto;
+      margin: 50px auto;
 }
 
-.contact-me--container{
-     margin-top: 250px;
-     width: 100%;
-     height: 550px;
-     margin-bottom: -10px;
+.contact-me div{
+     margin: 10px;
+}
+.contact-me input{
+    width: 100%;
+    height: 40px;
+   
+}
+
+
+.contact-me .contact-me-container--mensaje{
+      height: 120px;
+}
+
+.contact-me .submitButton{
+    width: 15%;
+    margin-left: 20px;
+    background-color: #6d00e1;
+    color: aliceblue;
+    border-color: #6d00e1;
+}
+
+.contact-me .limpiar{
+    width: 15%;
+    margin-left: 20px;
+    background-color: #0c090f;
+    color: aliceblue;
+    border-color: #6d00e1;
 }
 
 
@@ -207,6 +280,99 @@ footer{
 }
 
 footer .div-col2{
-    margin-left: 50px;
+    margin-left: 10%;
     
 }
+
+.burger{
+    display: none;
+    height: 30px;
+    width: 35px;
+    border-radius: 10%;
+    background-color: #6d00e1;
+
+}
+
+.burger div{
+    
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+    
+}
+
+.projects{
+    height: 1200px;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 962px){
+    .about-container{
+        width: 100%;
+        text-align: right;
+    }
+    .about--presentation-container .title{
+        font-size: 2rem;
+        font-weight: bold;
+        font-weight: bold;
+        color: whitesmoke;
+        font-family: 'work sans' sans-serif;
+   }
+    
+    .aboutme--presentation-container{
+        margin-top: -280px;
+    }
+    .aboutme--presentation-container .about-me{
+        font-size: 1.3rem;
+        
+    }
+
+    .about-me--tools{
+        min-width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #1e2326;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        margin-left: 85%;
+        cursor:pointer;
+    }
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+
+}
+
+

@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+       sitekey: string;
 
-  constructor() { }
+  constructor() { 
+    this.sitekey = '6LdBn4gcAAAAAB2qgIj-xu8Gvzn21Xoc278lWLr3';
+  }
 
   ngOnInit(): void {
   }
