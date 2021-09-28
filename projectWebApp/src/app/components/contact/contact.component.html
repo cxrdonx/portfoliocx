@@ -1,24 +1,20 @@
 <div class="contact-me--container">
     <div class="contact-me">
-        <form action="/send-email" method="POST">
+<form #forms="ngForm" (ngSubmit)="onSubmit(forms)" novalidate>
     <div class="name">
-        <input type="text" name="nombre" placeholder="Nombre" class="contact-me--name">
-    </div>
-    <div class="affair">
-        <input type="text" name="asunto" placeholder="Asunto" class="contact-me--affair">
-    </div>
-    <div class="correo">
-        <input type="text" name="correo" placeholder="Correo" class="contact-me-container--correo" >
-    </div>
-    <div class="mensaje">
-        <input type="text-area" name="mensaje" placeholder="Mensaje" class="contact-me-container--mensaje" >
-    </div>
-
-         
-
+        <input type="text" name="name" placeholder="   Nombre" class="contact-me--name" #name="ngModel" [(ngModel)]="email.name"/>
+     </div>
+     <div class="affair">
+        <input type="text" name="affair" placeholder="   Asunto" class="contact-me--affair" [(ngModel)]="email.affair" >
+     </div>
+     <div class="correo">
+        <input type="text" name="correo" placeholder="   Correo" class="contact-me-container--correo" [(ngModel)]="email.email" >
+     </div>
+     <div class="mensaje">
+        <input type="text-area" name="mensaje" placeholder="   Mensaje" class="contact-me-container--mensaje" [(ngModel)]="email.message">
+     </div>
      <input type="submit" value="Enviar" class="submitButton">
-     <input type="button" value="Limpiar" class="limpiar">
-       
-    </form>
+     <input type="button" value="Limpiar" id="limpiar" class="limpiar">
+</form>
 </div>
 </div>

@@ -20,6 +20,15 @@
   
    <script>
      AOS.init();
+     const nombre = document.getElementsByClassName('.contact-me--name');
+     const asunto = document.getElementsByClassName('.asunto');
+    //const button = document.getElementById('.limpiar');
+  //   button.addEventlistener('click', () => {
+  //         nombre.values = '';
+  //         asunto.values = '';
+  //          alert('Mensaje enviado');
+  //   });
+
     
       const navSlide = () => {
         const burger = document.querySelector('.burger');
@@ -33,11 +42,8 @@
           //Animate Links
         
       }
-      grecaptcha.enterprise.ready(function() {
-    grecaptcha.enterprise.execute('6Lcc6YQcAAAAAN-Lwu2j9rM2Ntm7nlUbNQwrnrNW', {action: 'login'}).then(function(token) {
-      
-    });
-});
+
+
     
 
       

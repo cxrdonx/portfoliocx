@@ -9,7 +9,8 @@ var controller = {
           project.name = params.name;
           project.description = params.description;
           project.category = params.category;
-          project.langs = params.category;
+          project.langs = params.langs;
+          project.image = params.image;
 
             project.save((err, projectStored) =>{
                 if(err) return res.status(500).send({message:'internal server error'});
@@ -56,7 +57,50 @@ var controller = {
                  return res.status(200).send({project});
                 });
                 
-            }
+            },
+
+            
+             
+           sendEmail: function(req, res){
+               const{email, name, message} = req.body;
+               
+
+             
+           },
+
+
+
+
+        uploadImage: function(req, res){
+             var project = new Projets();
+             var params = req.body;
+             var file_name = 'No subido...';
+             if(req.files){        
+                 var file_path = req.files.image.path;
+                 var file_split = file_path.split('\\');
+                 var file_name = file_split[2];
+                var ext_split = file_name.split('\.');
+                 var file_ext = ext_split[1];
+                if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){
+                     project.image = file_name;
+                    project.save((err, projectStored) =>{
+
+                        if(err) return res.status(500).send({message:'internal server error'});
+                        return res.status(200).send({project:projectStored});
+                     });
+                }else{
+
+                     return removeFilesOfUploads(res, file_path, 'extension not valid');
+             }
+        }else{
+
+                 return res.status(200).send({message:'no files to upload'});
+             }
+         },
+
+
+                
+
     }
 
 module.exports = controller;
