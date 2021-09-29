@@ -11,6 +11,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
 
 
 
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     ContactComponent,
     CreateComponent,
     ErrorComponent,
+    AllProjectsComponent,
     
   ],
   imports: [

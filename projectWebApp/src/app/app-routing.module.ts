@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
       {path:'sobre-mi', component: AboutComponent}, 
       {path:'contacto', component: ContactComponent},
       {path:'cargar-proyecto', component: CreateComponent},
+      {path:'all-proyects', component:AllProjectsComponent},
       {path:'**', component:AboutComponent}
 ];
 

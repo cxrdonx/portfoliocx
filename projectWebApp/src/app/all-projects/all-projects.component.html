@@ -1,0 +1,25 @@
+<div class="upload-project--container">
+    <div class="projects-form">
+<div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="name">
+        <input type="text" name="name" placeholder="   Nombre del proyecto" class="upload-name" #name="ngModel" [(ngModel)]="project.name"/>
+     </div>
+     <div class="description">
+        <input type="text" name="description" placeholder="   Descirpicion" class="upload-description" [(ngModel)]="project.description" >
+     </div>
+     <div class="category">
+        <input type="text" name="category" placeholder="   Categoria o Mas descripcion" class="upload-category" [(ngModel)]="project.category" >
+     </div>
+     <div class="langs">
+        <input type="text-area" name="langs" placeholder="   Tecnologías utilizadas" class="upload-langs" [(ngModel)]="project.langs">
+     </div>
+     <div class="image">
+         <input type="file" name="image" value="subir imagen" placeholder="subir imagen" class="upload-image" (change)="fileChangeEvent($event)" >
+     </div>
+     <input type="submit" value="Enviar" class="submitButton">
+     <input type="button" value="Limpiar" id="limpiar" class="limpiar">
+    </form>
+</div>
+</div>
+</div>

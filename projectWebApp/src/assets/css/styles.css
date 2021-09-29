@@ -235,7 +235,7 @@ header a:hover{
 .contact-me div{
      margin: 10px;
 }
-.contact-me input{
+.contact-me input, .projects-form input{
     width: 100%;
     height: 40px;
     color: whitesmoke;
@@ -269,6 +269,23 @@ header a:hover{
     background-color: #0c090f;
     color: aliceblue;
     border-color: #6d00e1;
+}
+.all-projects{
+    height: 1200px;
+}
+
+.upload-project--container{
+    width: 100%;
+    height: 1200px;
+    background-color: #161a1d;
+    display: flex;
+    
+
+}
+.upload-project--container .projects-form{
+     width: 50%;
+     height: 500px;
+     margin: 300px auto;
 }
 
 footer{
