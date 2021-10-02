@@ -1,3 +1,11 @@
+:root{
+    --main-black:#161a1d;
+    --purple:#6d00e1;
+    --white:whiteSmoke;
+    --dark-card:#252A2E;
+    --light-dark:#1e2326;
+}
+
 @font-face{
      font-family: "";
      src:url();
@@ -32,7 +40,7 @@ header{
     height: 75px;
     position: fixed;
     text-transform: uppercase;
-    background-color: #161a1d;
+    background-color: var(--main-black);
 }
 
 header ul{
@@ -55,15 +63,15 @@ header ul li a{
     height: inherit;
     text-decoration: none;
     font-size: 1.2rem;
-    color: whitesmoke;
+    color: var(--white);
     transition: all 400ms;
     padding-inline: 48px;
 }
 
 
 header a:hover{
-       background: #6d00e1 ;
-       color: whitesmoke;
+       background: var(--purple);
+       color: var(--white);
 }
 
 .background-image{
@@ -77,7 +85,7 @@ header a:hover{
     width: 100%;
     margin: 0 auto;
     padding-top: 1px;
-    background-color:#1e2326;
+    background-color:var(--light-dark);
 }
 
 .animation{
@@ -107,13 +115,13 @@ header a:hover{
      font-size: 2.5rem;
      font-weight: bold;
      font-weight: bold;
-     color: whitesmoke;
+     color: var(--white);
      font-family: 'work sans' sans-serif;
 }
 
 .about--presentation-container .subtitle{
      font-size: 1rem;
-     color: whitesmoke;
+     color: var(--white);
 }
 
 .aboutme--presentation-container{
@@ -122,14 +130,14 @@ header a:hover{
     width: 100%;
      text-align:center;
         padding: 100px;
-        background-color:#1e2326;
+        background-color:var(--light-dark);
 
 }
 .aboutme--presentation-container .about-me{
     font-size: 1.9rem;
     margin-top: 40px;
     margin-bottom: 100px;
-    color:whitesmoke;
+    color:var(--white);
     
 }
 
@@ -146,13 +154,13 @@ header a:hover{
     max-width: 50%;
     height: 400px;
     align-items: center;
-    border-left: #6d00e1 solid 3px;
+    border-left: var(--purple) solid 3px;
     margin: 0px auto;
     padding: 50px;
     display: flex;
     flex-direction: column;
-    color:whitesmoke;
-    background-color: #252A2E;
+    color:var(--white);
+    background-color: var(--dark-card);
     box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
     
 }
@@ -238,16 +246,16 @@ header a:hover{
 .contact-me input, .projects-form input{
     width: 100%;
     height: 40px;
-    color: whitesmoke;
+    color: var(--white);
     border-color: transparent;
-    background-color: #1e2326;
+    background-color:var(--light-dark);
     outline:none;
 
 }
 
 .contact-me input:hover{
     background-color: #293034;
-    border-color: #6d00e1;
+    border-color: var(--purple);
 }
 
 .contact-me .contact-me-container--mensaje{
@@ -258,17 +266,17 @@ header a:hover{
 .contact-me .submitButton{
     width: 15%;
     margin-left: 20px;
-    background-color: #6d00e1;
-    color: aliceblue;
-    border-color: #6d00e1;
+    background-color: var(--purple);
+    color: var(--white);
+    border-color: var(--purple);
 }
 
 .contact-me .limpiar{
     width: 15%;
     margin-left: 20px;
     background-color: #0c090f;
-    color: aliceblue;
-    border-color: #6d00e1;
+    color: var(--white);
+    border-color: var(--purple)
 }
 .all-projects{
     height: 1200px;
@@ -279,13 +287,15 @@ header a:hover{
     height: 1200px;
     background-color: #161a1d;
     display: flex;
-    
-
+}
+.projects-form div{
+      margin: 10px;
 }
 .upload-project--container .projects-form{
      width: 50%;
      height: 500px;
      margin: 300px auto;
+     background-color: var(--dark-card);
 }
 
 footer{
@@ -313,7 +323,7 @@ footer .div-col2{
     height: 30px;
     width: 35px;
     border-radius: 10%;
-    background-color: #6d00e1;
+    background-color: var(--purple)
 
 }
 
@@ -326,8 +336,11 @@ footer .div-col2{
     
 }
 
-.projects{
+.projects-container{
     height: 1200px;
+    width: 100%;
+    background-color: #161a1d; ;
+    display: flex;
 }
 
 @keyframes navLinkFade {
@@ -350,7 +363,7 @@ footer .div-col2{
         font-size: 2rem;
         font-weight: bold;
         font-weight: bold;
-        color: whitesmoke;
+        color: var(--white);
         font-family: 'work sans' sans-serif;
 
    }
@@ -375,7 +388,7 @@ footer .div-col2{
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #1e2326;
+        background-color: var(--light-dark);
         display: flex;
         flex-direction: column;
         align-items:center;

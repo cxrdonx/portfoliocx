@@ -16,10 +16,13 @@ import { Global } from '../service/global';
 export class AllProjectsComponent implements OnInit {
   public project: Project;
   public filesToUpload: Array<File>;
+  public projectId: string;
+  public projects: any;
 
   constructor(private _projectService: ProjectService, private _uploadService: UploadService) {
         this.project = new Project('','','','','','');
         this.filesToUpload = new Array<File>();
+        this.projectId = this.project._id;
    }
 
   ngOnInit(): void {
@@ -48,6 +51,4 @@ export class AllProjectsComponent implements OnInit {
   fileChangeEvent(fileInput: any) {
     this.filesToUpload = <Array<File>>fileInput.target.files;
   }
-
-
 }

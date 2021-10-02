@@ -29,4 +29,8 @@ import { Emails } from "../models/emails";
 
             return this._http.post(this.url+'send-email', params, {headers: headers});
         }
+
+        getProjects(): Observable<any>{
+            return this._http.get(this.url+'all');
+        }
     }

@@ -59,15 +59,10 @@ var controller = {
                  return res.status(200).send({project});
                 });
                 
-            },
-
-            
+            },          
              
            sendEmail: function(req, res){
-               const{email, name, message} = req.body;
-               
-
-             
+               const{email, name, message} = req.body;          
            },
 
            findbyId: function(req, res){
@@ -122,7 +117,4 @@ var controller = {
             }
         }
 }
-
-                
-
 module.exports = controller;
