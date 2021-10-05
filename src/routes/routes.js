@@ -11,4 +11,5 @@ router.post('/image', projectsController.uploadImage);
 router.post('/send-email', projectsController.sendEmail);
 router.put('/update',projectsController.findByIdAndUpdate);
 router.post('/send-image/:id', multipartMiddleware, projectsController.uploadImage);
+router.get('/get-image/:image', projectsController.getImage );
 module.exports = router

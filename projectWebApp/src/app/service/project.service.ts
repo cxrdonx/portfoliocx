@@ -4,6 +4,7 @@ import {observable, Observable} from 'rxjs';
 import {Project} from '../models/project';
 import {Global} from './global';
 import { Emails } from "../models/emails";
+import { ThrowStmt } from "@angular/compiler";
 @Injectable()
     export class ProjectService{
         public url: string;
@@ -33,4 +34,5 @@ import { Emails } from "../models/emails";
         getProjects(): Observable<any>{
             return this._http.get(this.url+'all');
         }
+
     }

@@ -336,11 +336,45 @@ footer .div-col2{
     
 }
 
+
+
 .projects-container{
     height: 1200px;
     width: 100%;
-    background-color: #161a1d; ;
     display: flex;
+    background-color: #161a1d; 
+
+ 
+}
+
+.projects-container .projects-list{
+      height: 300px;
+      width: 30%;
+      padding: 50px;
+      align-items: center;
+      margin: 200px auto;
+      display:block;
+      text-align: center;
+      background-color: #3432366d;
+      border-radius: 3%;
+}   
+
+.projects-list h2{
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--white);
+}
+
+.projects-list p{
+    
+       color: var(--white);
+       font-size: 1.5rem;
+
+}
+
+.projects-list img{
+     width: 200px;
+     height: 120px;
 }
 
 @keyframes navLinkFade {

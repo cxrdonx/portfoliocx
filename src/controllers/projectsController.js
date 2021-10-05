@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 const Projects = require('../models/proyects');
 var fs = require('fs');
 const proyects = require('../models/proyects');
+var path = require('path');
 var controller = {
     save: function(req, res){
         var project = new Projects();
@@ -115,6 +116,21 @@ var controller = {
              } else{
                 return res.status(200).send({meessage: file_name});
             }
+        },
+
+        getImage: function(req,res) {
+            var file = req.params.image;
+            var path_file = './uploads/' + file;
+            fs.exists(path_file, (exists) =>{
+              if(exists){
+                  return res.sendFile(path.resolve(path_file));
+              }else{
+                  return res.status(200).send({
+                      message: "image dont exists"
+                  });
+              }
+            });
         }
+        
 }
 module.exports = controller;

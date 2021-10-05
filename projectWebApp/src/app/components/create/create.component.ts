@@ -14,20 +14,20 @@ import { Project } from 'src/app/models/project';
 })
 export class CreateComponent implements OnInit {
 public projects: any;
+public url: string;
 
   constructor( private _projectService: ProjectService ) { 
-    
+    this.url = Global.url;
   }
                
-  ngOnInit(): void {
+  ngOnInit() {
      this.seeAllProjects();
   }
 
   seeAllProjects(){
     this._projectService.getProjects().subscribe(
-    response=>{
-           this.projects = response;
-          console.log(response);
+    result=>{
+           this.projects = result;
        
       },
       error=>{
