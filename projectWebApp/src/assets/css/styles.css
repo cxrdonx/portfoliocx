@@ -336,8 +336,6 @@ footer .div-col2{
     
 }
 
-
-
 .projects-container{
     height: 1200px;
     width: 100%;
@@ -346,6 +344,23 @@ footer .div-col2{
 
  
 }
+.projects-container h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.projects-container p{
+  
+     color: var(--white);
+     font-size: 1.5rem;
+
+}
+
+.projects-container img{
+   width: 200px;
+   height: 120px;
+}
 
 .projects-container .projects-list{
       height: 300px;
@@ -353,29 +368,24 @@ footer .div-col2{
       padding: 50px;
       align-items: center;
       margin: 200px auto;
-      display:block;
+      display:inline-block;
       text-align: center;
-      background-color: #3432366d;
+      background-color:var(--dark-card);
       border-radius: 3%;
+      cursor:pointer;
 }   
 
-.projects-list h2{
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--white);
-}
-
-.projects-list p{
-    
-       color: var(--white);
-       font-size: 1.5rem;
-
-}
-
-.projects-list img{
-     width: 200px;
-     height: 120px;
-}
+.projects-container .projects-list2{
+    height: 300px;
+    width: 30%;
+    padding: 50px;
+    align-items: center;
+    margin: 200px auto;
+    display:table-column;
+    text-align: center;
+    background-color:var(--dark-card);
+    border-radius: 3%;
+}   
 
 @keyframes navLinkFade {
     from{
@@ -448,3 +458,73 @@ footer .div-col2{
 }
 
 
+.overlay {
+	background: rgba(228, 224, 224, 0.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+    visibility: hidden;
+	
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+
+.popup .info-content {
+
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 1000px;
+    height: 600px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 2;
+    
+}
+
+.popup .cerrar {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .cerrar:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 2;
+}
+
+.popup p {
+	font-size: 26px;
+	font-weight: 300;
+	margin-bottom: 40px;
+
+}
+
+
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active p { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .info-content { animation: entradaInputs 1s linear 1s forwards; }

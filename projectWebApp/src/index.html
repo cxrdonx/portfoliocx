@@ -20,6 +20,7 @@
   
    <script>
      AOS.init();
+
      const nombre = document.getElementsByClassName('.contact-me--name');
      const asunto = document.getElementsByClassName('.asunto');
     //const button = document.getElementById('.limpiar');
@@ -43,7 +44,26 @@
         
       }
 
+      var btnabrirpopup = document.getElementById('btn-abrirpopup'),
+          overlay = document.getElementById('overlay'),
+          popup = document.getElementById('popup'),
+          image = document.getElementById('image'),
+          btncerrar = document.getElementById('cerrar');
 
+    function mostrar(){
+           overlay.classList.add('active');
+    }
+
+    btnabrirpopup.addEventListener('click', ()=>{
+             alert("hueco sos");
+    });
+
+    image.addEventListener('click', () =>{
+              alert("hueco sos"); 
+    })
+    
+
+   
     
 
       
