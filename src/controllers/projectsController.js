@@ -63,7 +63,7 @@ var controller = {
             },          
              
            sendEmail: function(req, res){
-               const{email, name, message} = req.body;          
+               const{email, affair, name, message} = req.body;          
            },
 
            findbyId: function(req, res){

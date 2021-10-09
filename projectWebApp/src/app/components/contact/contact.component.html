@@ -1,3 +1,5 @@
+
+<p><span></span>CONTACTO</p>
 <div class="contact-me--container">
     <div class="contact-me">
 <form #forms="ngForm" (ngSubmit)="onSubmit(forms)" novalidate>
@@ -11,7 +13,8 @@
         <input type="text" name="correo" placeholder="   Correo" class="contact-me-container--correo" [(ngModel)]="email.email" >
      </div>
      <div class="mensaje">
-        <input type="text-area" name="mensaje" placeholder="   Mensaje" class="contact-me-container--mensaje" [(ngModel)]="email.message">
+       <!--<input type="text-area" name="mensaje" placeholder="   Mensaje" class="contact-me-container--mensaje" [(ngModel)]="email.message">-->
+       <textarea name="textarea" rows="10" cols="50" class="textarea" [(ngModel)]="email.message">Mensaje</textarea>
      </div>
      <input type="submit" value="Enviar" class="submitButton">
      <input type="button" value="Limpiar" id="limpiar" class="limpiar">
