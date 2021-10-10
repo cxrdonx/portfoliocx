@@ -1,3 +1,6 @@
+const nodemailer = require('nodemailer');
+const {google} = require('googleapis');
+
 'use strict'
 var vaccine = require('../models/proyects');
 var mongoose = require('mongoose');
@@ -5,6 +8,15 @@ const Projects = require('../models/proyects');
 var fs = require('fs');
 const proyects = require('../models/proyects');
 var path = require('path');
+
+const CLIENT_ID = '993748911568-7c65j18ccf4n0jem6g5qi3gc1ee1ubqd.apps.googleusercontent.com';
+const CLIENT_SECRET ='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';
+const REDIRECT_URI ='https://developers.google.com/oauthplayground';
+const REFRESH_TOKEN ='1//04kGLhqlLa5oiCgYIARAAGAQSNwF-L9IrT8oVwWCSgZVnXQIFFSCufF3ueYZ7Wf3GfvGoNd5sZ0XjIbSycG846Agg3LOAyhA01_8';
+const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+oauth2Client.setCredentials({
+  refresh_token: REFRESH_TOKEN
+});
 var controller = {
     save: function(req, res){
         var project = new Projects();
@@ -62,8 +74,35 @@ var controller = {
                 
             },          
              
-           sendEmail: function(req, res){
-               const{email, affair, name, message} = req.body;          
+         sendEmail: async function(req, res){
+            const{email, affair, name, message} = req.body;     
+             try{
+                const accesToken = await oauth2Client.getAccessToken();
+                const transport = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        type: 'OAuth2',
+                        user: 'j.cardona.covenant@gmail.com',
+                        clientId: CLIENT_ID,
+                        clientSecret: CLIENT_SECRET,
+                        refreshToken: REFRESH_TOKEN,
+                        accessToken: accesToken
+                    }
+                });
+                const mailOptions ={
+                    from: email,
+                    to: 'jose.eduardo.cardona@gmail.com',
+                    subject: affair,
+                    tex: message,
+                    html: `<h3>Emperesa: ${name}</h3>
+                           <p>${message}</p>`
+                };
+                const result = await transport.sendMail(mailOptions);
+                return result;
+             }catch(error){
+                 return error;
+             }
+                    
            },
 
            findbyId: function(req, res){

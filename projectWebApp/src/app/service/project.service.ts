@@ -20,14 +20,12 @@ import { ThrowStmt } from "@angular/compiler";
         saveProject(project: Project): Observable<any>{
             let params = JSON.stringify(project);
             let headers = new HttpHeaders().set('Content-Type', 'application/json');
-
             return this._http.post(this.url+'save', params, {headers: headers});
         }
 
         sendEmail(email: Emails): Observable<any>{
             let params = JSON.stringify(email);
             let headers = new HttpHeaders().set('Content-Type', 'application/json');
-
             return this._http.post(this.url+'send-email', params, {headers: headers});
         }
 
