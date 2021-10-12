@@ -1,13 +1,19 @@
 
-<p><span></span>CONTACTO</p>
 <div class="contact-me--container">
+ <!--
+   <div class ="social-networks">
+      <div class="icons-link"><span class="link-img"></span></div>
+    <div class="icons-git"><span class="git-img"></span></div>
+    <div class="icons-twit"><span class="twit-img"></span></div>
+   </div>
+   -->
     <div class="contact-me">
 <form #forms="ngForm" (ngSubmit)="onSubmit(forms)" novalidate>
     <div class="name">
-        <input type="text" name="name" placeholder="   Nombre" class="contact-me--name" #name="ngModel" [(ngModel)]="email.name"/>
+        <input type="text" name="name" placeholder="   Nombre" class="contact-me--name" id="contact-me--name" #name="ngModel" [(ngModel)]="email.name"/>
      </div>
      <div class="affair">
-        <input type="text" name="affair" placeholder="   Asunto" class="contact-me--affair" [(ngModel)]="email.affair" >
+        <input type="text" name="affair" placeholder="   Asunto" class="contact-me--affair" id="asunto" [(ngModel)]="email.affair" >
      </div>
      <div class="correo">
         <input type="text" name="correo" placeholder="   Correo" class="contact-me-container--correo" [(ngModel)]="email.email" >
@@ -16,8 +22,8 @@
        <!--<input type="text-area" name="mensaje" placeholder="   Mensaje" class="contact-me-container--mensaje" [(ngModel)]="email.message">-->
        <textarea name="textarea" rows="10" cols="50" class="textarea" [(ngModel)]="email.message">Mensaje</textarea>
      </div>
-     <input type="submit" value="Enviar" class="submitButton">
-     <input type="button" value="Limpiar" id="limpiar" class="limpiar">
+     <input type="submit" value="Enviar" class="submitButton" id="enviar">
+     <input type="button" value="Limpiar" id="limpiar" class="limpiar" onclick="clear()">
 </form>
 </div>
 </div>

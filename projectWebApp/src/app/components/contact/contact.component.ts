@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
      console.log(this.email);
     this._projectService.sendEmail(this.email).subscribe(
       response=>{
-        console.log(response); 
+        alert(response);
       },
        error=>{
         console.log(<any>error); 

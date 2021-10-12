@@ -221,24 +221,43 @@ header a:hover{
 
 }
 
+.about-me--laptop-logo{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    margin-top: calc(190px - -10px);
+    left: calc(50% - 46px);
+    background-image: url('../images/laptop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    animation: beat .50s infinite alternate;
+	transform-origin:top;
+}
+
+@keyframes beat{
+	to { transform: scale(1.2); }
+}
+
 .contact-me--container{
-    margin-top: 200px;
+    margin: 0 auto;
     width: 100%;
-    height: 600px;
-    margin-bottom: -10px;
+    height: 900px;
     display:flex;   
-    
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .contact-me--container .contact-me{
       min-width: 50%;
-     margin: 0 auto;
+     margin: 150px auto;
       height: 450px;
       background-color: #121516;
       display: inline-block;
-      margin: 0px auto;
       box-shadow: 0px 18px 18px 0 rgba(0, 0, 1, 2);
-     
+     margin-bottom: 175px;
 }
 
 .contact-me div{
@@ -289,6 +308,61 @@ header a:hover{
     color: var(--white);
     border-color: var(--purple)
 }
+
+.social-networks{
+    margin: 150px auto;
+    height: 110px;
+    width: 60%;
+   margin-bottom: 100px;
+  
+    display: flex;
+   
+}
+.social-networks .icons-git, .icons-link{
+
+    width: 300px;
+    height: 110px;
+    border-right: 2px solid var(--purple);
+}
+
+.social-networks span{    
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    margin-bottom : 50px;
+    
+}
+
+.social-networks .git-img{
+    background-image: url('../images/githubblue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 120px;
+    cursor:pointer;
+}
+
+.social-networks .link-img{
+    background-image: url('../images/linkedin.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 120px;
+    cursor: pointer;
+}
+.social-networks .twit-img{
+    background-image: url('../images/twitter.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+
 .all-projects{
     height: 1200px;
 }
@@ -347,6 +421,7 @@ footer .div-col2{
     
 }
 
+
 .projects-container{
     height: auto;
     width: 100%;
@@ -396,7 +471,6 @@ footer .div-col2{
     height: 300px;
     min-width: 40%;
     max-width: 90%;
-
     padding: 50px;
     align-items: center;
     margin: 200px auto;
@@ -406,6 +480,8 @@ footer .div-col2{
     border-radius: 3%;
     box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
 }   
+
+
 
 @keyframes navLinkFade {
     from{
@@ -471,7 +547,14 @@ footer .div-col2{
     }
 
     .contact-me--container .contact-me{
+        margin-top: 120px;
         min-width: 90%;
+        display: inline-block;
+    }
+
+    .about-me--laptop-logo{
+        margin-top: calc(190px - 180px);
+        left: calc(50% - 46px);
     }
     
 }

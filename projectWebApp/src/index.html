@@ -13,22 +13,15 @@
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
   <app-root></app-root>
+  <script src="./scripts/script.js" type="text/script"></script>
    <script>
      AOS.init();
-
-     const nombre = document.getElementsByClassName('.contact-me--name');
-     const asunto = document.getElementsByClassName('.asunto');
-    //const button = document.getElementById('.limpiar');
-  //   button.addEventlistener('click', () => {
-  //         nombre.values = '';
-  //         asunto.values = '';
-  //          alert('Mensaje enviado');
-  //   });
-
     
       const navSlide = () => {
         const burger = document.querySelector('.burger');
@@ -42,17 +35,6 @@
           //Animate Links
         
       }
-
-      var btnabrirpopup = document.getElementById('btn-abrirpopup'),
-          overlay = document.getElementById('overlay'),
-          popup = document.getElementById('popup'),
-          image = document.getElementById('image'),
-          btncerrar = document.getElementById('cerrar');
-
-    function mostrar(){
-           overlay.classList.add('active');
-    }
-      
    </script>
 </body>
 </html>
