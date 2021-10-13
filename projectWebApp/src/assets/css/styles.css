@@ -17,7 +17,7 @@
 }
 html{
     font-size: 62.5%;
-    font-family: work sans;
+    font-family:'Roboto Mono', monospace;
 }
 body{
     background-attachment: fixed;
@@ -108,20 +108,23 @@ header a:hover{
     padding: 170px;
     text-align: center;
     /*margin-bottom: 415px;*/
-    
+    font-family:monospace;
 }
 
 .about--presentation-container .title{
      font-size: 2.5rem;
      font-weight: bold;
-     font-weight: bold;
      color: var(--white);
-     font-family: 'work sans' sans-serif;
+     font-family: 'Catamaran', sans-serif;
+     
+    
 }
 
 .about--presentation-container .subtitle{
      font-size: 1rem;
      color: var(--white);
+ 
+     font-family: 'Catamaran', sans-serif;
 }
 
 .aboutme--presentation-container{
@@ -143,6 +146,7 @@ header a:hover{
 
 .aboutme--presentation-container .about-me h2{
       font-size: 2.5rem;
+      font-family: 'Catamaran', sans-serif;
 }
 
 
@@ -225,7 +229,7 @@ header a:hover{
     position: absolute;
     width: 110px;
     height: 110px;
-    margin-top: calc(190px - -10px);
+    margin-top: calc(190px - 40px);
     left: calc(50% - 46px);
     background-image: url('../images/laptop.png');
     background-repeat: no-repeat;
@@ -462,10 +466,18 @@ footer .div-col2{
       text-align: center;
       background-color:var(--dark-card);
       border-radius: 3%;
-      cursor:pointer;
       margin-bottom: -20px;
       box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
 }   
+
+ .contact-me--container h2{
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--white);
+        margin-top: 90px;
+  font-family: 'Catamaran', sans-serif;
+    }
+
 
 .projects-container .projects-list3{
     height: 300px;
@@ -480,7 +492,19 @@ footer .div-col2{
     border-radius: 3%;
     box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
 }   
-
+.projects-list:hover, .projects-list2:hover, .projects-list3:hover{
+    background-color: #6d00e1;
+    cursor: pointer;
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2{
+      opacity: 0;
+  }
+  .toggle .line3{
+      transform: rotate(45deg) translate(-5px,- 6px);
+  }
 
 
 @keyframes navLinkFade {
@@ -493,6 +517,10 @@ footer .div-col2{
         transform: translateX(0px);
     }
 }
+
+
+
+
 
 @media screen and (max-width: 962px){
     .about-container{
@@ -509,18 +537,20 @@ footer .div-col2{
    }
     
     .aboutme--presentation-container{
-        margin-top: -280px;
+     
     }
     .aboutme--presentation-container .about-me{
         font-size: 1.3rem;
+        text-align: center;
         
     }
 
     .about-me--tools{
         min-width: 100%;
+    
     }
     body{
-        overflow-x: hidden;
+        overflow-x: hidden ;
     }
 
     .nav-links{
@@ -553,10 +583,39 @@ footer .div-col2{
     }
 
     .about-me--laptop-logo{
-        margin-top: calc(190px - 180px);
+        margin-top: 170px;
         left: calc(50% - 46px);
     }
     
+}
+
+@media screen and (max-width: 618px){
+    .about-me--laptop-logo{
+        margin-top: 100px;
+        left: calc(50% - 46px);
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .about-me--laptop-logo{
+        margin-top: 50px;
+        left: calc(50% - 46px);
+        position: absolute;
+    }
+
+
+    .about-me--tools{
+        margin-top: -40px;
+    }
+
+    footer div{
+        margin-left: -80px;
+    }
+
+    .aboutme--presentation-container{
+       
+    }
 }
 
 .nav-active{

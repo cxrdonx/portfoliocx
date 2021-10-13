@@ -7,6 +7,7 @@
     <div class="icons-twit"><span class="twit-img"></span></div>
    </div>
    -->
+   <h2>CONTACTO</h2>
     <div class="contact-me">
 <form #forms="ngForm" (ngSubmit)="onSubmit(forms)" novalidate>
     <div class="name">
@@ -23,7 +24,7 @@
        <textarea name="textarea" rows="10" cols="50" class="textarea" [(ngModel)]="email.message">Mensaje</textarea>
      </div>
      <input type="submit" value="Enviar" class="submitButton" id="enviar">
-     <input type="button" value="Limpiar" id="limpiar" class="limpiar" onclick="clear()">
+     <input type="button" value="Limpiar" id="limpiar" class="limpiar" >
 </form>
 </div>
 </div>
