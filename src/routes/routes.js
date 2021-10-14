@@ -6,7 +6,7 @@ var multipartMiddleware = multipart({ uploadDir: './uploads' });
 
 router.post('/save', projectsController.save);
 router.get('/all', projectsController.getProjects);
-router.get('projects/:id', projectsController.getProject);
+router.get('/projects/:id', projectsController.getProject);
 router.post('/image', projectsController.uploadImage);
 router.post('/send-email', projectsController.sendEmail);
 router.put('/update',projectsController.findByIdAndUpdate);

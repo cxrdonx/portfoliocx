@@ -9,22 +9,36 @@
    -->
    <h2>CONTACTO</h2>
     <div class="contact-me">
+        <div class="message success" *ngIf="status == 'success'">
+           Se envio el mensaje
+        </div>
 <form #forms="ngForm" (ngSubmit)="onSubmit(forms)" novalidate>
     <div class="name">
-        <input type="text" name="name" placeholder="   Nombre" class="contact-me--name" id="contact-me--name" #name="ngModel" [(ngModel)]="email.name"/>
+        <input type="text" name="name" placeholder="   Nombre" class="contact-me--name" id="contact-me--name" #name="ngModel" [(ngModel)]="email.name" required/>
+        <span class="form-error" *ngIf="name.touched && !name.valid">
+           El nombre es obligatorio
+        </span>
      </div>
      <div class="affair">
-        <input type="text" name="affair" placeholder="   Asunto" class="contact-me--affair" id="asunto" [(ngModel)]="email.affair" >
+        <input type="text" name="affair" placeholder="   Asunto" class="contact-me--affair" id="asunto" #emailadd="ngModel" [(ngModel)]="email.affair"/>
+  
      </div>
      <div class="correo">
-        <input type="text" name="correo" placeholder="   Correo" class="contact-me-container--correo" [(ngModel)]="email.email" >
+        <input type="text" name="correo" placeholder="   Correo" class="contact-me-container--correo"  #mail ="ngModel" [(ngModel)]="email.email" required/>
+        <span class="form-error" *ngIf="mail.touched && !mail.valid">
+        El correo es obligatorio
+      </span>
      </div>
      <div class="mensaje">
        <!--<input type="text-area" name="mensaje" placeholder="   Mensaje" class="contact-me-container--mensaje" [(ngModel)]="email.message">-->
-       <textarea name="textarea" rows="10" cols="50" class="textarea" [(ngModel)]="email.message">Mensaje</textarea>
+       <textarea name="textarea" rows="10" cols="50" class="textarea" [(ngModel)]="email.message" #message ="ngModel" required>Mensaje</textarea>
+       <span class="form-error" *ngIf="message.touched && !message.valid">
+         No se puede enviar el mensaje vacío
+       </span>
      </div>
-     <input type="submit" value="Enviar" class="submitButton" id="enviar">
-     <input type="button" value="Limpiar" id="limpiar" class="limpiar" >
+     <input type="submit" value="Enviar" class="submitButton" id="submitButton" [disabled]="!forms.form.valid">
+     <a href="mailto:jose.eduardo.cardona@gmail.com" class="mailto">Prefiero utilizar mi correo electrónico</a>
+     <!--<input type="button" value="Limpiar" id="limpiar" class="limpiar" >-->
 </form>
 </div>
 </div>

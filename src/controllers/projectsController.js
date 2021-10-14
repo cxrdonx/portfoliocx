@@ -36,15 +36,15 @@ var controller = {
         },
 
         getProject: function(req, res){
-            var project = req.params.id;
-           if(project == null) return res.status(400).send({message:'the ID does not exist'});
-           project.findbyId(project, (err, project) =>{
+            var projectId = req.params.id;
+           if(projectId == null) return res.status(400).send({message:'the ID does not exist'});
+           Projects.findById(projectId, (err, project) =>{
                 if(err) return res.status(500).send({message:'error returning data'});
                 if(!project) return res.status(404).send({message: "does not exist"});
                 return res.status(200).send({project});
-            });
-           
+            });           
         },
+
         getProjects: function(req, res){
             Projects.find({}).exec((err, project)=>{
                 if(err) return res.satatus(500).send({message:"error returning data"});

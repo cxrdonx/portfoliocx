@@ -2,28 +2,28 @@
      
 <div class="projects-container">
 
-<div class="projects-list">
+<div class="projects-list" [routerLink] ="['/proyecto', projects.project[0]._id]">
     <img src="{{url+'get-image/'+projects.project[0].image}}">
     <h2>{{projects.project[0].name}}</h2>
     <p>{{projects.project[0].description}}</p>
        <button id="btnabrirpopup" class="btnabrirpopup">Leer mas</button>
 </div>
 
-<div class="projects-list2">
-    <img src="{{url+'get-image/'+projects.project[0].image}}" class="image" id="image">
-    <h2>{{projects.project[0].name}}</h2>
-    <p>{{projects.project[0].description}}</p>
-    <p>{{projects.project[0].category}}</p>
-    <p>{{projects.project[0].langs}}</p>
+<div class="projects-list2"  [routerLink] ="['/proyecto', projects.project[1]._id]" >
+    <img src="{{url+'get-image/'+projects.project[1].image}}" class="image" id="image">
+    <h2>{{projects.project[1].name}}</h2>
+    <p>{{projects.project[1].description}}</p>
+    <p>{{projects.project[1].category}}</p>
+    <p>{{projects.project[1].langs}}</p>
     
 </div>
 
-<div class="projects-list3">
-    <img src="{{url+'get-image/'+projects.project[0].image}}" class="image" id="image">
-    <h2>{{projects.project[0].name}}</h2>
-    <p>{{projects.project[0].description}}</p>
-    <p>{{projects.project[0].category}}</p>
-    <p>{{projects.project[0].langs}}</p>
+<div class="projects-list3"  [routerLink] ="['/proyecto', projects.project[2]._id]">
+    <img src="{{url+'get-image/'+projects.project[2].image}}" class="image" id="image">
+    <h2>{{projects.project[2].name}}</h2>
+    <p>{{projects.project[2].description}}</p>
+    <p>{{projects.project[2].category}}</p>
+    <p>{{projects.project[2].langs}}</p>
     
 </div>
 

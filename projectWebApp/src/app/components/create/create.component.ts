@@ -30,7 +30,7 @@ public url: string;
     this._projectService.getProjects().subscribe(
     result=>{
            this.projects = result;
-       
+            console.log(this.projects);
       },
       error=>{
         console.log(<any>error);

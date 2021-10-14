@@ -33,4 +33,9 @@ import { ThrowStmt } from "@angular/compiler";
             return this._http.get(this.url+'all');
         }
 
+        getProject(id:any): Observable<any>{
+            let headers= new HttpHeaders().set('Content-Type', 'application/json');
+            return this._http.get(this.url+'projects/'+id, {headers: headers});
+        }
+
     }

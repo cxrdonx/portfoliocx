@@ -6,16 +6,17 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
-
+import { DetailComponent } from './components/detail/detail.component';
 
 
 const routes: Routes = [
-      {path:'', component: AboutComponent},
       {path:'sobre-mi', component: AboutComponent}, 
       {path:'contacto', component: ContactComponent},
       {path:'cargar-proyecto', component: CreateComponent},
       {path:'all-proyects', component:AllProjectsComponent},
+      {path:'proyecto/:id', component:DetailComponent},
       {path:'**', component:AboutComponent}
+      
 ];
 
 @NgModule({

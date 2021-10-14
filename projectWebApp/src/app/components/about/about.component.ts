@@ -14,7 +14,7 @@ public tools: string[];
 
   constructor() { 
     this.title ="HOLA, soy José Cardona";
-    this.subtitle ="Programador Java";
+    this.subtitle ="Programador";
     this.tools = ["Java", "NodeJs", "HTML", "CSS", "JavaScript", "Github"];
   }
 
