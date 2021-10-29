@@ -44,6 +44,7 @@ export class ContactComponent implements OnInit {
   
     this._projectService.sendEmail(this.email).subscribe(
       response=>{
+        console.log(this.email);
          if(response.email){
            this.status = 'success';
            console.log(this.status);

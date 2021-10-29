@@ -94,7 +94,8 @@ var controller = {
                     to: 'jose.eduardo.cardona@gmail.com',
                     subject: affair,
                     tex: message,
-                    html: `<h3>Emperesa: ${name}</h3>
+                    html: `<h1>${email}</h1>
+                          <h3>Emperesa: ${name}</h3>
                            <p>${message}</p>`
                 };
                 const result = await transport.sendMail(mailOptions);
