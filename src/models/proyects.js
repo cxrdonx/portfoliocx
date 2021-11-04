@@ -9,4 +9,5 @@ var Schema = mongoose.Schema;
      image: String,
      langs:[String]
  })
+
  module.exports = mongoose.model("Project", projectsInfo);

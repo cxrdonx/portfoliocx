@@ -20,5 +20,13 @@
     "start": "nodemon src/index.js"
   },
   "author": "cxrdonx",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxrdonx/portFoliocx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cxrdonx/portFoliocx/issues"
+  },
+  "homepage": "https://github.com/cxrdonx/portFoliocx#readme"
 }

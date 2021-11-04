@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   
-       oAuth2Client: any;
+    oAuth2Client: any;
      public email: Emails;
      public status: any;
 
