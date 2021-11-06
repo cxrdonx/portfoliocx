@@ -42,7 +42,12 @@ import { Blog } from "../models/blog";
         saveBlog(blog:Blog): Observable<any>{
                let params = JSON.stringify(blog);
                let headers = new HttpHeaders().set('content-Type', 'application/json');
+               console.log(params);
                return this._http.post(this.url+'save-blog', params, {headers:headers});
+        }
+
+        getBlogs(): Observable<any>{
+                 return this._http.get(this.url+'all-blogs/');
         }
 
     }

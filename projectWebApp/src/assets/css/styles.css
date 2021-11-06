@@ -635,9 +635,32 @@ footer .div-col4 .imgfoot2{
  }
 
  .blog-container .blog-text{
-     height: 600px;
-     margin: 0 auto;
+     height: auto;
+     margin: 120px auto;
      align-items: center;
+     
+ }
+
+ .blog-text .blog-list .p{
+     text-decoration: none;
+     
+ }
+
+ .blog-text .blogs-container{
+     background-color: #6d00e1;
+ }
+
+ .blog-text .title{
+    margin-top: 120px;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+ }
+
+ .blog-text .content{
+    margin-top: 10px;
+    font-size:1.6rem;
+    color: white;
  }
 
 
