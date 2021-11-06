@@ -7,6 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path:'cargar-proyecto', component: CreateComponent},
       {path:'all-proyects', component:AllProjectsComponent},
       {path:'proyecto/:id', component:DetailComponent},
+      {path:'blog', component: BlogComponent},
       {path:'**', component:AboutComponent}
       
 ];

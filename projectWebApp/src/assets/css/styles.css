@@ -382,24 +382,26 @@ header a:hover{
     cursor: pointer;
 }
 
-
-.all-projects{
-    height: 1200px;
-}
-
 .upload-project--container{
     width: 100%;
-    height: 1200px;
+    height: 1600px;
     background-color: #161a1d;
-    display: flex;
+    display: inline-block;
 }
 .projects-form div{
       margin: 10px;
 }
+.projects-form p{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
 .upload-project--container .projects-form{
      width: 50%;
-     height: 500px;
-     margin: 300px auto;
+     height: auto;
+     margin: 150px auto;
      background-color: var(--dark-card);
 }
 
@@ -618,6 +620,24 @@ footer .div-col4 .imgfoot2{
 
  .mailto:hover{
      background-color: var(--purple);
+ }
+
+ .blog-container{
+      height: auto;
+      width: 100%;
+
+ }
+ .blog-container .blog-container--content{
+       display: flex;
+       height: auto;
+       width: 100%;
+         text-align: center;
+ }
+
+ .blog-container .blog-text{
+     height: 600px;
+     margin: 0 auto;
+     align-items: center;
  }
 
 

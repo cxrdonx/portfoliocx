@@ -45,6 +45,47 @@ var controller = {
 
        },
 
+       updateBlog: function(req, res){
+        var id = req.params.id;
+        var update = req.body;
+        Blog.findByIdAndUpdate(id, update, (err, blogUpdated) =>{
+            if(err) return res.status(500).send({message:'a error as ocurred'});
+            if(!blogUpdated) return res.status(404).send({message:'nothing to update'});
+            return res.status(200).send({blogUpdated});
+        }
+        );
+         },
+
+       uploadImage: function(req, res){
+        var blogId = req.params.id;
+        var file_name = 'No subido...';
+        if(req.files){        
+            var file_path = req.files.image.path;
+            console.log("path:");
+            console.log(file_path);
+            var file_split = file_path.split('\\');
+            var file_name = file_split[1];
+           var ext_split = file_name.split('\.');
+            var file_ext = ext_split[1];
+           if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){
+                blogId.findByIdAndUpdate(blogId, {image:file_name},{new: true},(err, blogUpdated) =>{
+                   if(err) return res.status(500).send({message:'error'});
+                   if(!blogUpdated) return res.status(404).send({message:'noid'});
+                   return res.status(200).send({
+                       blog: blogUpdated
+                   });
+               });
+           }else{
+
+               fs.unlink(file_path, (err) =>{
+                   if(err) return res.status(200).send({message:'extension not valid'});
+               });
+           }
+        } else{
+           return res.status(200).send({meessage: file_name});
+       }
+   },
+
 }
 
 module.exports = controller;

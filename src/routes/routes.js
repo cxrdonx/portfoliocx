@@ -14,7 +14,10 @@ router.put('/update',projectsController.findByIdAndUpdate);
 router.post('/send-image/:id', multipartMiddleware, projectsController.uploadImage);
 router.get('/get-image/:image', projectsController.getImage );
 router.post('/save-blog', blogController.saveBlog);
+router.post('/save-blog-image',multipartMiddleware, blogController.uploadImage);
 router.get('/all-blogs', blogController.getBlogs);
 router.get('/blog/:id', blogController.getBlog);
 router.delete('/delete-blog/:id', blogController.deleteBlog);
+router.post('/update-blog/:id', blogController.updateBlog);
+
 module.exports = router

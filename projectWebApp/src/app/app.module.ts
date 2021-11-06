@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { CreateComponent } from './components/create/create.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 
@@ -24,7 +25,8 @@ import { CreateComponent } from './components/create/create.component';
     CreateComponent,
     ErrorComponent,
     AllProjectsComponent,
-    DetailComponent
+    DetailComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
