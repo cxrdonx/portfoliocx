@@ -2,9 +2,8 @@
   <div class="blog-container--content">
      <div class="blog-text">
         <li *ngFor="let blog of blogs.blog; index as i; first as isFirst" class="blog-list">
-        <div class="blogs-container">
+        <div class="blogs-container" [routerLink]="['/see-blog', blog._id]">
           <p class="title" alt="blog-title">{{blog.title}}</p>
-          <p class="content" alt="blog-title">{{blog.content}}</p>
            </div>
         </li>
         </div>

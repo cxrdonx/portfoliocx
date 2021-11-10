@@ -50,4 +50,9 @@ import { Blog } from "../models/blog";
                  return this._http.get(this.url+'all-blogs/');
         }
 
+        getBlog(id:any):Observable<any>{
+             let headers = new HttpHeaders().set('Content-Type', 'application/json');
+             return this._http.get(this.url+'blog/'+id, {headers: headers});
+        }
+
     }

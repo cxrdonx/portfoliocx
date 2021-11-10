@@ -292,7 +292,7 @@ header a:hover{
 
 }
 
-.contact-me .textarea{
+.contact-me textarea{
     width: 100%;
     color: var(--white);
     padding: 10px;
@@ -398,6 +398,15 @@ header a:hover{
     font-size: 1.6rem;
 }
 
+.projects-form .content #upload-content{
+    width: 90%;
+    height: 200px;
+    background-color: var(--main-black);
+    color: white;
+    padding: 12px;
+    word-break: break-all;
+}
+
 .upload-project--container .projects-form{
      width: 50%;
      height: auto;
@@ -469,11 +478,20 @@ footer .div-col4 .imgfoot2{
 .projects-container{
     height: auto;
     width: 100%;
+    min-height: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #161a1d; 
+}
 
+.projects-container .project-for-list{
+    height: auto;
+    display: flex;
+    width: 60%;
+    margin: 200px auto;
+    margin-bottom: 200px;
+ 
 }
 
 
@@ -495,18 +513,16 @@ footer .div-col4 .imgfoot2{
    height: 120px;
 }
 
-.projects-container .projects-list, .projects-list2{
+.projects-container .projects-list{
       height: 300px;
-      min-width: 40%;
-      max-width: 90%;
+      margin: 0 auto;
+      min-width: 77%;
       padding: 50px;
       align-items: center;
-      margin: 200px auto;
-      display:inline-block;
+      margin: 0px auto;
       text-align: center;
       background-color:var(--dark-card);
       border-radius: 3%;
-      margin-bottom: -20px;
       box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
 }   
 
@@ -520,20 +536,7 @@ footer .div-col4 .imgfoot2{
     }
 
 
-.projects-container .projects-list3{
-    height: 300px;
-    min-width: 40%;
-    max-width: 90%;
-    padding: 50px;
-    align-items: center;
-    margin: 200px auto;
-    display:table-column;
-    text-align: center;
-    background-color:var(--dark-card);
-    border-radius: 3%;
-    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
-}   
-.projects-list:hover, .projects-list2:hover, .projects-list3:hover{
+.projects-list:hover{
     background-color: #6d00e1;
     cursor: pointer;
 }
@@ -623,6 +626,7 @@ footer .div-col4 .imgfoot2{
  }
 
  .blog-container{
+     min-height: 1200px;
       height: auto;
       width: 100%;
 
@@ -663,11 +667,52 @@ footer .div-col4 .imgfoot2{
     color: white;
  }
 
+ .blog-text .blogs-container{
+     width: 50%;
+     margin: 0 auto;
+     
+ }
+
+ .blog-text .blogs-container:hover{
+     cursor:pointer;
+ }
+
+ .show-blogs--container{
+     width: 100%;
+     min-height: 1200px;
+     height: auto;
+     display: flex;
+     background-color: var(--main-black);
+ }
+ .show-blogs--container .blog-container{
+     margin: 120px auto;
+     width: 90%;
+     background-color: var(--light-dark);
+ }
+
+ .blog-container .bog-header{
+       margin-bottom: 30px;
+       height: auto;
+ }
+ .blog-container h2{
+        font-size: 2rem;
+        color: var(--white);
+        margin-left: 30px;
+        margin-top: 30px;
+ }
 
 
+ .blog-container .blog-content{
+     text-align: justify;
+     color: var(--white);
+     font-size: 1.6rem;
+     width: 95%;
+ }
 
-
-
+ .blog-container .blog-content p{
+     margin-left: 30px;
+ }
+ 
 
 
 @keyframes navLinkFade {

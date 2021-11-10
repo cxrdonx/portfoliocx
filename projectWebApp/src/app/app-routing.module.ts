@@ -8,6 +8,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { ShowBlogsComponent } from './components/show-blogs/show-blogs.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path:'all-proyects', component:AllProjectsComponent},
       {path:'proyecto/:id', component:DetailComponent},
       {path:'blog', component: BlogComponent},
+      {path:'see-blog/:id', component:ShowBlogsComponent}, 
       {path:'**', component:AboutComponent}
       
 ];

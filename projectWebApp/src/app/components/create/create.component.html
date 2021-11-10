@@ -1,41 +1,20 @@
 
      
 <div class="projects-container">
+        <li *ngFor="let project of projects.project; index as i; first as isFirst" class="project-for-list">
+        <div class="projects-list" [routerLink]="['/proyecto', project._id]">
+            <img src="{{url+'get-image/'+project.image}}">
+            <h2>{{project.name}}</h2>
+            <p>{{project.description}}</p>
+            <p>{{project.category}}</p>
+            <p>{{project.langs}}</p>
+           </div>
+          
+        </li>
 
-<div class="projects-list" [routerLink] ="['/proyecto', projects.project[0]._id]">
-    <img src="{{url+'get-image/'+projects.project[0].image}}">
-    <h2>{{projects.project[0].name}}</h2>
-    <p>{{projects.project[0].description}}</p>
-    
-</div>
 
-<div class="projects-list2"  [routerLink] ="['/proyecto', projects.project[1]._id]" >
-    <img src="{{url+'get-image/'+projects.project[1].image}}" class="image" id="image">
-    <h2>{{projects.project[1].name}}</h2>
-    <p>{{projects.project[1].description}}</p>
-    <p>{{projects.project[1].category}}</p>
-    <p>{{projects.project[1].langs}}</p>
-    
-</div>
 
-<div class="projects-list3"  [routerLink] ="['/proyecto', projects.project[2]._id]">
-    <img src="{{url+'get-image/'+projects.project[2].image}}" class="image" id="image">
-    <h2>{{projects.project[2].name}}</h2>
-    <p>{{projects.project[2].description}}</p>
-    <p>{{projects.project[2].category}}</p>
-    <p>{{projects.project[2].langs}}</p>
-    
-</div>
 
-<div class="overlay" id="overlay">
-    <div class="popup" id="popup">
-        <a href="#" id="cerrar" class="cerrar"><i class="fas fa-times"></i></a>
-    <div class="info-content">
-        <h3>NOMBRE PROYECTO</h3>
-        <p>Descripcion</p>
-        <p>lenguajes utilizados</p>
     </div>
-    </div>
-</div>
 
-</div>
+

@@ -14,6 +14,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { CreateComponent } from './components/create/create.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { ShowBlogsComponent } from './components/show-blogs/show-blogs.component';
 
 
 
@@ -26,7 +27,8 @@ import { BlogComponent } from './components/blog/blog.component';
     ErrorComponent,
     AllProjectsComponent,
     DetailComponent,
-    BlogComponent
+    BlogComponent,
+    ShowBlogsComponent
   ],
   imports: [
     BrowserModule,
