@@ -17,13 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon src/index.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "lite": "lite-server",
-    "postinstall": "ng build --prod"
+    "start": "nodemon src/index.js"
   },
   "author": "cxrdonx",
   "license": "MIT",
