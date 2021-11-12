@@ -23,10 +23,5 @@ app.use((req, res, next) => {
 });
 
 app.use('/', projects);
-
 app.use(express.static(path.join( __dirname, 'public')));
-app.use(express.static( __dirname, 'dist/projectWebApp'));
-app.get('/portafolio', function (req, res){
-	res.sendFile(path.join(_dirname + '/dist/projectWebApp/src/app/index.html'));
-});
 module.exports = app;
