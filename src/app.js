@@ -27,6 +27,6 @@ app.use(express.static(path.join( __dirname, 'public')));
 
 app.use(express.static(__dirname + '/dist/project-web-app'));
 app.get('/portafolio', function(req,res) {
-    res.sendFile(path.join(__dirname+'/dist/portafolio/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/project-web-app/index.html'));
 });
 module.exports = app;
