@@ -23,5 +23,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/', projects);
+app.get('/portafolio', function (req, res){
+	res.sendFile(path.join(_dirname + '/dist/projectWebApp/src/app/index.html'));
+});
 app.use(express.static(path.join( __dirname, 'public')));
 module.exports = app;

@@ -8,6 +8,7 @@ mongoose.connect('mongodb+srv://cardona:Umr3H2sjYw9dbWp@cluster0.7z3lp.mongodb.n
     app.listen((process.env.PORT || 3700),()=>{
         console.log("servidor corriendo correctamente");
     });
+
 })
    .catch(err => console.log(err));
 
