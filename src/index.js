@@ -1,7 +1,7 @@
 'use strict'
 const mongoose = require('mongoose');
 const app = require('../src/app.js');
-const port = 3700;
+const port = 3000;
 mongoose.promise = global.promise;
 mongoose.connect('mongodb://localhost:27017/portfolio')
 .then(()=>{
