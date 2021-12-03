@@ -36,5 +36,8 @@ export class BlogComponent implements OnInit {
       }
     )
   }
+  click(){
+    console.log("click");
+  }
 
 }

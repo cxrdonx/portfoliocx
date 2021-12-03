@@ -74,12 +74,14 @@ header a:hover{
        color: var(--white);
 }
 
+
 .background-image{
-     background-image: url('../images/backEnd.jpg');
+     background-image: url('../images/background-image2.gif');
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
 }
+
 .page-home{
     
     width: 100%;
@@ -103,18 +105,27 @@ header a:hover{
 }
 
 .about--presentation-container{
-    
+    width: 100%;
     margin-bottom: 200px;
-    padding: 170px;
+    padding: 10px;
     text-align: center;
     /*margin-bottom: 415px;*/
     font-family:monospace;
 }
 
+.about--presentation-container .title, .subtitle{
+    width: 60%;
+    margin-left: calc(22% - 14px);
+    margin-top: 3px;
+}
+
+
 .about--presentation-container .title{
+    margin-top: 195px;
      font-size: 2.5rem;
      font-weight: bold;
      color: var(--white);
+     background-color: var(--light-dark);
      font-family: 'Catamaran', sans-serif;
      
     
@@ -123,7 +134,7 @@ header a:hover{
 .about--presentation-container .subtitle{
      font-size: 1rem;
      color: var(--white);
- 
+     background-color: var(--light-dark);
      font-family: 'Catamaran', sans-serif;
 }
 
@@ -730,7 +741,7 @@ footer .div-col4 .imgfoot2{
 
 
 
-@media screen and (max-width: 962px){
+@media screen and (max-width: 1184px){
     .about-container{
         width: 100%;
         text-align: right;
@@ -801,6 +812,11 @@ footer .div-col4 .imgfoot2{
         margin-top: 200px;
         left: calc(50% - 46px);
         position: absolute;
+    }
+
+    .about--presentation-container .title{
+        
+        font-size: 1.5rem;
     }
 }
 
