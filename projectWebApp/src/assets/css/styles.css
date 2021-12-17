@@ -83,12 +83,12 @@ header a:hover{
 }
 
 .page-home{
-    
     width: 100%;
     margin: 0 auto;
     padding-top: 1px;
     background-color:var(--light-dark);
 }
+
 
 .animation{
     opacity: 0;
@@ -147,6 +147,7 @@ header a:hover{
         background-color:var(--light-dark);
 
 }
+
 .aboutme--presentation-container .about-me{
     font-size: 1.9rem;
     margin-top: 30px;
@@ -280,7 +281,7 @@ header a:hover{
 }
 
 .contact-me--container .contact-me{
-      min-width: 50%;
+      min-width: 40%;
      margin: 150px auto;
       height: 450px;
       background-color: #121516;
@@ -499,9 +500,9 @@ footer .div-col4 .imgfoot2{
 .projects-container .project-for-list{
     height: auto;
     display: flex;
-    width: 60%;
+    width: 90%;
     margin: 200px auto;
-    margin-bottom: 200px;
+    margin-bottom: 120px;
  
 }
 
@@ -525,14 +526,12 @@ footer .div-col4 .imgfoot2{
 }
 
 .projects-container .projects-list{
-      height: 300px;
+     height: auto;
       margin: 0 auto;
-      min-width: 77%;
       padding: 50px;
       align-items: center;
-      margin: 0px auto;
       text-align: center;
-      background-color:var(--dark-card);
+      background-color: var(--dark-card);
       border-radius: 3%;
       box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
 }   
@@ -820,6 +819,13 @@ footer .div-col4 .imgfoot2{
     }
 }
 
+footer .img-foot{
+    margin: 0 auto;
+    display: flex;
+    margin-left: 8px;
+    margin-top: 0px;
+}
+
 @media screen and (max-width: 500px){
     .about-me--laptop-logo{
         margin-top: 200px;
@@ -833,6 +839,11 @@ footer .div-col4 .imgfoot2{
 
     footer .div-col4{
         margin-top: 28px;
+
+    }
+
+    footer .img-foot{
+       margin-left: 110px;
     }
 
 
