@@ -2,11 +2,11 @@ const nodemailer = require('nodemailer');
 const {google} = require('googleapis');
 
 'use strict'
-var vaccine = require('../models/proyects');
 var mongoose = require('mongoose');
 const Projects = require('../models/proyects');
 var fs = require('fs');
 const proyects = require('../models/proyects');
+const Email = require('../models/email');
 var path = require('path');
 
 const CLIENT_ID = '993748911568-7c65j18ccf4n0jem6g5qi3gc1ee1ubqd.apps.googleusercontent.com';
@@ -75,6 +75,19 @@ var controller = {
             },          
              
          sendEmail: async function(req, res){
+            var email = new Email(); 
+            var params = req.body;
+            params.name = req.body.name;
+            params.matter = req.body.matter;
+            params.email = req.body.email;
+            params.body = req.body.body;
+
+              email.save((err, emailStored) =>{
+                if(err) return res.status(500).send({message:'internal server error'});
+                if(!emailStored) return res.status(404).send({message:'could not save'});
+                return res.status(200).send({email:emailStored});
+            });
+
             const{email, affair, name, message} = req.body;     
              try{
                 const accesToken = await oauth2Client.getAccessToken();
