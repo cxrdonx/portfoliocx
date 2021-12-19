@@ -7,6 +7,7 @@ var Schema = mongoose.Schema;
      description: String,
      category: String,
      image: String,
+     links:String,
      langs:[String]
  })
 
