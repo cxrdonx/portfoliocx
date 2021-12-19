@@ -25,6 +25,7 @@ var controller = {
           project.description = params.description;
           project.category = params.category;
           project.langs = params.langs;
+          project.links = params.links;
           project.image = params.image;
 
             project.save((err, projectStored) =>{
@@ -94,8 +95,8 @@ var controller = {
                     to: 'jose.eduardo.cardona@gmail.com',
                     subject: affair,
                     tex: message,
-                    html: `<h1>${email}</h1>
-                          <h3>Emperesa: ${name}</h3>
+                    html: `<h2>${email}</h2>
+                          <h3>Empresa: ${name}</h3>
                            <p>${message}</p>`
                 };
                 console.log(mailOptions);
