@@ -10,7 +10,7 @@ router.get('/all', projectsController.getProjects);
 router.get('/projects/:id', projectsController.getProject);
 router.post('/image', projectsController.uploadImage);
 router.post('/send-email', projectsController.sendEmail);
-router.put('/update',projectsController.findByIdAndUpdate);
+router.put('/update/:id',projectsController.findByIdAndUpdate);
 router.post('/send-image/:id', multipartMiddleware, projectsController.uploadImage);
 router.get('/get-image/:image', projectsController.getImage );
 router.post('/save-blog', blogController.saveBlog);

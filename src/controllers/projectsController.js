@@ -121,9 +121,9 @@ var controller = {
             },
 
            findByIdAndUpdate: function(req, res){
-                    var projectId = req.params.id;
+                    var project = req.params.id;
                     var update = req.body;
-                    Projects.findByIdAndUpdate(projectId, update, (err, projectUpdated) =>{
+                    Projects.findByIdAndUpdate(project, update, (err, projectUpdated) =>{
                                if(err)return res.status(500).send({message: 'error'});
                                if(!projectUpdated) return res.status(400).send({message:'noid'});
                                return res.status(200).send({
@@ -142,7 +142,7 @@ var controller = {
                  var file_name = file_split[1];
                 var ext_split = file_name.split('\.');
                  var file_ext = ext_split[1];
-                if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){
+                if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif' || file_ext == 'JPG'){
                      proyects.findByIdAndUpdate(projectId, {image:file_name},{new: true},(err, projectUpdated) =>{
                         if(err) return res.status(500).send({message:'error'});
                         if(!projectUpdated) return res.status(404).send({message:'noid'});
